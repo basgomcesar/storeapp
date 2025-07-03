@@ -1,16 +1,14 @@
+import sampleData from "@/db/sample-data";
+import ProductList from "@/components/product/product-list";
 
 const Home = () => {
-
+  // Example usage of the sample data
   return (
     <div>
-      <main>
-        <h1>Welcome to {process.env.NEXT_PUBLIC_APP_NAME}</h1>
-        <p>Your one-stop shop for all things e-commerce.</p>
-      </main>
-      <footer>
-        <p>&copy; {new Date().getFullYear()} ProStore. All rights reserved.</p>
-      </footer>
+      <ProductList data={sampleData.products} limit={3} title="Newest Arrivals"/>
     </div>
   );
 };
 export default Home;
+
+
