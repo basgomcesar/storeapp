@@ -10,7 +10,7 @@ import {
   DropdownMenuCheckboxItem,
 } from "@/components/ui/dropdown-menu";
 import { useTheme } from "next-themes";
-import { Moon, Sun,Computer } from "lucide-react";
+import { Moon, Sun, Computer } from "lucide-react";
 
 const ModeToggle = () => {
   const { theme, setTheme } = useTheme();
@@ -47,7 +47,7 @@ const ModeToggle = () => {
           onCheckedChange={() => setTheme("system")}
           className="focus-visible:ring-0 focus-visible:ring-offset-0"
         >
-            <Computer />
+          <Computer />
           System
         </DropdownMenuCheckboxItem>
         <DropdownMenuCheckboxItem
@@ -56,15 +56,15 @@ const ModeToggle = () => {
           className="focus-visible:ring-0 focus-visible:ring-offset-0"
         >
           <Sun />
-            Light
+          Light
         </DropdownMenuCheckboxItem>
         <DropdownMenuCheckboxItem
           checked={theme === "dark"}
           onCheckedChange={() => setTheme("dark")}
-            className="focus-visible:ring-0 focus-visible:ring-offset-0"
+          className="focus-visible:ring-0 focus-visible:ring-offset-0"
         >
           <Moon />
-            Dark
+          Dark
         </DropdownMenuCheckboxItem>
       </DropdownMenuContent>
     </DropdownMenu>

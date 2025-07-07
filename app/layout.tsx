@@ -12,7 +12,7 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title: {
-    template: `%s | ${process.env.NEXT_PUBLIC_APP_NAME}`,
+    template: `%s | ${APP_NAME}`,
     default: APP_NAME,
   },
   description: APP_DESCRIPTION,
