@@ -6,7 +6,12 @@ const Home = async () => {
   const lastestProducts = await getLatestProducts();
   return (
     <div>
-      <ProductList data={lastestProducts} limit={3} title="Newest Arrivals"/>
+      <ProductList data={lastestProducts
+        .map((product) => ({
+          ...product,
+          rating: typeof product.rating === "string" ? Number(product.rating) : product.rating,
+        }))
+      } limit={3} title="Newest Arrivals"/>
     </div>
   );
 };
